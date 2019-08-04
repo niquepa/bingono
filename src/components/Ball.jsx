@@ -3,19 +3,20 @@ import PropTypes from 'prop-types';
 
 class Ball extends React.PureComponent {
   render() {
-    const { number, css } = this.props;
+    const { number, pending } = this.props;
     return (
-      <p className={css}>{number}</p>
+      <span className={pending ? 'ball-pending' : 'ball-confirmed'}>{number}</span>
     );
   }
 }
 
 Ball.propTypes = {
   number: PropTypes.number.isRequired,
-  css: PropTypes.string,
+  pending: PropTypes.bool,
 };
 
 Ball.defaultProps = {
-  css: 'pending',
+  pending: true,
 };
+
 export default Ball;

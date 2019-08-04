@@ -12,12 +12,36 @@ code {
     monospace;
 }
 
-.confirmed  {
-  color: white;
-  background-color: green;
+.App  {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);  
 }
 
-.pending  {
+.latest {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.board {
+  grid-column: 1 / 4;
+  grid-row: 2 / 5;
+}
+
+.controls {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.ball-confirmed  {
+  color: white;
+  background-color: green;
+  margin: 2em;
+}
+
+.ball-pending  {
   color: black;
   background-color: gray;
+  margin: 2em;
 }

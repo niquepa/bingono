@@ -10,14 +10,14 @@ class LatestBalls extends React.PureComponent {
     const balls = [];
 
     LATEST_BALLS.forEach((ball) => {
-      balls.push(<Ball number={ball.number} key={ball.number} css="confirmed" />);
+      balls.push(<Ball number={ball.number} key={ball.number} pending={false} />);
     });
 
     return (
-      <React.Fragment>
+      <div className="latest">
         <h4>Latest Balls</h4>
         {balls}
-      </React.Fragment>
+      </div>
     );
   }
 }

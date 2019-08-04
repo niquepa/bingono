@@ -1,23 +1,24 @@
 import React from 'react';
-import Ball from './Ball';
+import BoardLine from './BoardLine';
 
-const BALLS = Array.from(Array(75).keys(), n => n + 1);
+const BALLS_1 = Array.from(Array(15).keys(), n => n + 1);
+const BALLS_2 = Array.from(Array(15).keys(), n => n + 16);
+const BALLS_3 = Array.from(Array(15).keys(), n => n + 31);
+const BALLS_4 = Array.from(Array(15).keys(), n => n + 46);
+const BALLS_5 = Array.from(Array(15).keys(), n => n + 61);
 const AVAILABLE = Array.from(Array(50).keys(), n => n + 1);
 
 class Board extends React.PureComponent {
   render() {
-    const balls = [];
-
-    BALLS.forEach((ball) => {
-      const css = AVAILABLE.includes(ball) ? 'pending' : 'confirmed';
-      balls.push(<Ball number={ball} key={ball} css={css} />);
-    });
-
     return (
-      <React.Fragment>
+      <div className="board">
         <h4>Board</h4>
-        {balls}
-      </React.Fragment>
+        <BoardLine numbers={BALLS_1} available={AVAILABLE} />
+        <BoardLine numbers={BALLS_2} available={AVAILABLE} />
+        <BoardLine numbers={BALLS_3} available={AVAILABLE} />
+        <BoardLine numbers={BALLS_4} available={AVAILABLE} />
+        <BoardLine numbers={BALLS_5} available={AVAILABLE} />
+      </div>
     );
   }
 }

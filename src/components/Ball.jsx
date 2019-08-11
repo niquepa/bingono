@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 class Ball extends React.PureComponent {
   render() {
     const { number, pending } = this.props;
+    const classes = `ball ${pending ? ' ball-pending' : ' ball-confirmed'}`;
     return (
-      <span className={pending ? 'ball-pending' : 'ball-confirmed'}>{number}</span>
+      <div className="centered">
+        <div className={classes}>{number}</div>
+      </div>
     );
   }
 }

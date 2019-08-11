@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       <LatestBalls />
-      <Board />
       <Controls />
+      <Board />
     </div>
   );
 }

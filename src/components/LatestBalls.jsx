@@ -15,7 +15,6 @@ class LatestBalls extends React.PureComponent {
 
     return (
       <div className="latest">
-        <h4>Latest Balls</h4>
         {balls}
       </div>
     );

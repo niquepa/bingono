@@ -13,7 +13,7 @@ class BoardLine extends React.PureComponent {
     });
 
     return (
-      <div>
+      <div className="boardLine">
         {balls}
       </div>
     );

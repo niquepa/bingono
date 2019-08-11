@@ -12,7 +12,6 @@ class Board extends React.PureComponent {
   render() {
     return (
       <div className="board">
-        <h4>Board</h4>
         <BoardLine numbers={BALLS_1} available={AVAILABLE} />
         <BoardLine numbers={BALLS_2} available={AVAILABLE} />
         <BoardLine numbers={BALLS_3} available={AVAILABLE} />

@@ -4,7 +4,12 @@ class Controls extends React.PureComponent {
   render() {
     return (
       <div className="controls">
-        <h4>Controls</h4>
+        <div className="">
+          <button className="button newBall">New Ball</button>
+        </div>
+        <div className="">
+          <button className="button newGame">New Game</button>
+        </div>  
       </div>
     );
   }

@@ -11,16 +11,24 @@ https://dribbble.com/shots/4327190-Bingo
   --black: #272727;
 }
 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   /* A system font stack so things load nice and quick! */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 900;
-  font-size: 10px;
-  color: var(--black);
+  font-size: 20px;
+  /* color: var(--black); */
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  /* min-height: 100vh;*/
+  height: 100vh;
 }
 
 /*
@@ -38,11 +46,14 @@ body {
   /* background-image: url("/images/topography.svg"), */
     /* linear-gradient(110deg, #f93d66, #6d47d9); */
   /* background-size: 340px, auto; */
-  min-height: calc(100vh - 100px);
-  margin: 10px;
+  /* min-height: calc(100vh - 100px); */
+  /* margin: 10px; */
   /* background: white; */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   letter-spacing: -1px;
+  width: 100vw;
+  height: 100vh;  
+  /* min-height: 100vh; */
 }
 
 .box {
@@ -54,8 +65,13 @@ body {
 .container {
   display: grid;
   grid-gap: 4em;
-  grid-template-rows: 20% auto;
+  grid-template-rows: 10% auto;
   align-items: center;
+  height: 100%;
+}
+
+.item {
+  height: 100%;
 }
 
 .header {
@@ -70,6 +86,8 @@ body {
   grid-gap: 2em;
   grid-template-columns: 20% auto;
   align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .lastball {
